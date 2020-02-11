@@ -10,14 +10,15 @@ package assignment1salarycalculator;
  * @author Nikoly
  */
 public class SalaryCalculator {
+    private int hoursPerYear = (52*40);
     
-    public int calcHourlyWage(int salary){
-        int hourWage = salary/(52*40);
+    public double calcHourlyWage(double salary){
+        double hourWage = salary / hoursPerYear;
         System.out.println("Your Hourly Wage is " + hourWage);
         return hourWage;
     }
-    public int calcSalary(int hourlyRate){
-        int salary = hourlyRate * (52*40);
+    public double calcSalary(double hourlyRate){
+        double salary = hourlyRate * hoursPerYear;
         System.out.println("Your Salary is " + salary);
         return salary;
     }
@@ -26,7 +27,7 @@ public class SalaryCalculator {
         System.out.println("Your Taxes Are " + taxes);
         return taxes;
     }
-    public double afterTax(double salary, double perc){
+    public double calcAfterTax(double salary, double perc){
         double cashOut = salary - ((perc/100)*salary);
         System.out.println("Your Cash Out Is " + cashOut);
         return cashOut;

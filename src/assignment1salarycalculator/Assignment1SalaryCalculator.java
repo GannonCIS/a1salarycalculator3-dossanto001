@@ -16,7 +16,10 @@ public class Assignment1SalaryCalculator {
      */
     public static void main(String[] args) {
         SalaryCalculator calc = new SalaryCalculator();
-        calc.calcHourlyWage(35000);
+        calc.calcHourlyWage(33280);
+        calc.calcSalary(16);
+        calc.calcTaxes(70000, 12);
+        calc.calcAfterTax(70000, 12);
         
     }
     
